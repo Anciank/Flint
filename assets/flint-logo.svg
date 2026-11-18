@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="flint-bg" x1="16" y1="8" x2="112" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141E30"/>
+      <stop offset="100%" stop-color="#090E17"/>
+    </linearGradient>
+    <linearGradient id="flint-left" x1="24" y1="22" x2="72" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="55%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="flint-right" x1="68" y1="44" x2="102" y2="94" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="flint-spark" x1="84" y1="12" x2="84" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ECFEFF"/>
+      <stop offset="45%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="116" height="116" rx="28" fill="url(#flint-bg)" stroke="#1E293B" stroke-width="3"/>
+  <g transform="translate(8,10) scale(1.75)">
+    <path d="M12 32 L32 16 L40 12 L25 32 L35 50 L27 52 Z" fill="url(#flint-left)"/>
+    <path d="M40 23 L52 34 L38 46 L33 41 L41 34 L34 28 Z" fill="url(#flint-right)"/>
+    <path d="M42 4 C43 10.1 45.4 12.5 51.5 13.5 C45.4 14.5 43 16.9 42 23 C41 16.9 38.6 14.5 32.5 13.5 C38.6 12.5 41 10.1 42 4 Z" fill="url(#flint-spark)"/>
+  </g>
+</svg>

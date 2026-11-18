@@ -1,0 +1,53 @@
+[package]
+name = "kestrel"
+version = "0.1.0"
+edition = "2024"
+default-run = "flint"
+description = "Flint — GPU-accelerated IDE built with GPUI for AI FIM, ReAct Repo Exploration, LSP, and Vim Code Navigation"
+
+[[bin]]
+name = "flint"
+path = "src/main.rs"
+
+[[bin]]
+name = "kestrel"
+path = "src/bin/kestrel.rs"
+
+[dependencies]
+anyhow = "1"
+async-channel = "2.5"
+gpui-kit = { version = "0.10.0", features = [
+    "tree-sitter-rust",
+    "tree-sitter-typescript",
+    "tree-sitter-tsx",
+    "tree-sitter-javascript",
+    "tree-sitter-python",
+    "tree-sitter-go",
+    "tree-sitter-c",
+    "tree-sitter-cpp",
+    "tree-sitter-toml",
+    "tree-sitter-markdown",
+    "tree-sitter-yaml",
+    "tree-sitter-bash",
+    "tree-sitter-css",
+    "tree-sitter-html",
+] }
+ignore = "0.4"
+lsp-types = { version = "0.97", features = ["proposed"] }
+regex = "1"
+ropey = { version = "=2.0.0-beta.1", features = ["metric_chars", "metric_lines_lf", "metric_utf16"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tree-sitter = "0.26.13"
+ureq = { version = "3", features = ["json"] }
+url = "2"
+
+[dev-dependencies]
+gpui-kit = { version = "0.10.0", features = ["test-support"] }
+tempfile = "3"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
